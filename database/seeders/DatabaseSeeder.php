@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Donation;
+use App\Models\Event;
+use App\Models\Partner;
+use App\Models\Program;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,9 +19,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@mail.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Admin',
+        //     'email' => 'admin@mail.com',
+        // ]);
+        Donation::factory(10)->create();
+        Program::factory(10)->create();
+        Event::factory(10)->create();
+        Partner::factory(10)->create();
     }
 }
