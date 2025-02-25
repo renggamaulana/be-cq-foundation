@@ -13,8 +13,8 @@ class HomepageController extends Controller
 {
     public function index()
     {
-        $donations = Donation::latest()->take(5)->get();
-        $events = Event::latest()->take(5)->get();
+        $donations = Donation::take(5)->get();
+        $events = Event::take(5)->get();
         $programs = Program::take(5)->get();
         $partners = Partner::all();
 

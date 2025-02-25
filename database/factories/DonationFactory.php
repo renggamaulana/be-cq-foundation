@@ -1,5 +1,6 @@
 <?php
 
+namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Donation;
 use Illuminate\Support\Facades\Storage;
