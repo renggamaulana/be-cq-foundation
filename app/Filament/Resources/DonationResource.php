@@ -29,9 +29,10 @@ class DonationResource extends Resource
         return $form
             ->schema([
                 TextInput::make('title')->required()->maxLength(255),
-                TextInput::make('collected_fund')->numeric()->default(0),
                 DatePicker::make('deadline'),
-                TextInput::make('progress')->label('Progress (%)')->numeric()->minValue(1)->maxValue(100)->default(0),
+                TextInput::make('collected_fund')->numeric()->default(0),
+                TextInput::make('target_fund')->numeric()->default(0),
+                // TextInput::make('progress')->label('Progress (%)')->numeric()->minValue(1)->maxValue(100)->default(0),
                 FileUpload::make('image')->image()->directory('donations'),
             ]);
     }
@@ -42,6 +43,7 @@ class DonationResource extends Resource
             ->columns([
                 TextColumn::make('title')->sortable()->searchable(),
                 TextColumn::make('collected_fund')->sortable(),
+                TextColumn::make('target_fund')->sortable(),
                 TextColumn::make('deadline')->sortable(),
                 TextColumn::make('progress')->label('Progress (%)')->sortable(),
                 ImageColumn::make('image'),
