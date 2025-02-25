@@ -1,0 +1,36 @@
+# CQ Foundation BE
+
+* Models :
+- Donation
+- Program
+- Event
+- Partner
+
+* DB Structures :
+1. Donation
+    - title (string)
+    - collected_fund (number)
+    - target_fund (number)
+    - deadline (timestamp)
+    - progress (number(max100))
+    - image (string)
+
+2. Program
+    - title
+    - description
+    - image
+
+3. Event
+    - title (string)
+    - studio (string)
+    - image (string)
+    - date (date)
+    - day (string)
+    - time (timestamp)
+    - live (boolean)
+
+4. Partner
+    - name (string)
+    - image (string)
+
+
