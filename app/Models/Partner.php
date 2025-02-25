@@ -16,4 +16,11 @@ class Partner extends Model
         'name',
         'image',
     ];
+
+    protected $appends = ['image_url'];
+
+    public function getImageUrlAttribute()
+    {
+        return $this->image ? asset('storage/' . $this->image) : null;
+    }
 }

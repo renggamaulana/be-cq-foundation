@@ -31,4 +31,11 @@ class Donation extends Model
     protected $casts = [
         'deadline' => 'datetime', // Mengatur tipe data deadline menjadi datetime
     ];
+
+    protected $appends = ['image_url'];
+
+    public function getImageUrlAttribute()
+    {
+        return $this->image ? asset('storage/' . $this->image) : null;
+    }
 }
